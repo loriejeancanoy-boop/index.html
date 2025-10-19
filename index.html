@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch Fun</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <!-- First Screen -->
+        <div id="firstScreen">
+            <h2 style="width: 100%; text-align: center; margin: 0 0 20px;">Catch Fun</h2>
+            
+            <h3 style="width: 80%; text-align: left; margin: 0 auto 10px;">Game Introduction</h3>
+            <h4 style="width: 80%; text-align: left; margin: 0 auto 20px;">
+                Welcome to the magical circus! Help the brave performer balance on the tightrope while catching falling circus items. 
+                Avoid dangerous objects and collect as many points as possible to become the star of the show!
+            </h4>
+            
+            <h3 style="width: 80%; text-align: left; margin: 0 auto 10px;">How to Play</h3>
+            <h4 style="width: 80%; text-align: left; margin: 0 auto 20px;" id="gameplayText">
+                Use LEFT and RIGHT arrow keys to move the performer along the tightrope. 
+                Catch falling circus items like balls, rings, and stars to earn points. 
+                Avoid bombs and other dangerous objects - they will end your performance!
+            </h4>
+            
+            <button id="startButton">Start Game</button>
+        </div>
+
+        <!-- Second Screen (Game) -->
+        <div id="secondScreen" style="display: none;">
+            <!-- Game Status -->
+            <div id="gameStatus">
+                <div>Score: <span id="score">0</span></div>
+                <div>Lives: <span id="lives">3</span></div>
+                <div>Level: <span id="level">1</span></div>
+            </div>
+
+            <!-- Game Canvas -->
+            <canvas id="gameCanvas"></canvas>
+
+            <!-- Mobile Controls -->
+            <div id="mobileControls" style="display: none;">
+                <div id="virtualJoystick">
+                    <div id="joystickBase">
+                        <div id="joystickKnob"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Over Popup -->
+        <div id="gameOverPopup" style="display: none;">
+            <div id="gameOverContent">
+                <h2>Game Over</h2>
+                <p>Final Score: <span id="finalScore">0</span></p>
+                <button id="playAgainButton">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
